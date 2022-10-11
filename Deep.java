@@ -3,33 +3,54 @@ import java.util.Arrays;
 
 public class Deep {
 
-    //instantiate int data array
-    private int[] data;
-
-    //method to make deep copy
-    public Deep(int[] values) {
+    private static int[] data;
+    public Deep (int[] values) {
         data = new int[values.length];
-        for (int i = 0; i < values.length; i++) {
+        for(int i = 0; i < values.length; i++) {
             data[i] = values[i];
         }
     }
 
-    public void showData(){
+    public void showData() {
         System.out.println(Arrays.toString(data));
     }
 
     public static void main(String[] args) {
-        int[] values = {44,33,22};
-        //new obj for deep copy and deep copy method called
+        int[] values = {13,14,15};
         Deep deepCopy = new Deep(values);
         deepCopy.showData();
-        //show that a change to original obj wont affect deep copy obj
-        values[0] = 3314123;
+        values[0] = 1202;
+        System.out.println("Original data: " + Arrays.toString(values));
         deepCopy.showData();
-        System.out.println("Original after change: " + Arrays.toString(values));
     }
-
 }
+//    //instantiate int data array
+//    private int[] data;
+//
+//    //method to make deep copy
+//    public Deep(int[] values) {
+//        data = new int[values.length];
+//        for (int i = 0; i < values.length; i++) {
+//            data[i] = values[i];
+//        }
+//    }
+//
+//    public void showData(){
+//        System.out.println(Arrays.toString(data));
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] values = {44,33,22};
+//        //new obj for deep copy and deep copy method called
+//        Deep deepCopy = new Deep(values);
+//        deepCopy.showData();
+//        //show that a change to original obj wont affect deep copy obj
+//        values[0] = 3314123;
+//        deepCopy.showData();
+//        System.out.println("Original after change: " + Arrays.toString(values));
+//    }
+//
+//}
 
 //    //instantiate data array to be used later
 //    private int[] data;

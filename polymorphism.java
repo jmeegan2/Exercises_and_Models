@@ -1,32 +1,51 @@
 public class polymorphism {
 
-    // forgot the void part in method
-
-    //off top of head code
-    static public class Animal {
-        public void animalSound(){
-            System.out.println("generic animal noise");
+    public static class Animal {
+        public void animalSound() {
+            System.out.println("Generic animal noise");
         }
     }
 
-    static public class Dog extends Animal {
-        public void animalSound() {
-            System.out.println("The dog says 'roof'");
+    public static class Pig extends Animal {
+        public void animalSound(){
+            System.out.println("Pig says Oink");
         }
     }
 
     public static void main(String[] args) {
-        //Create animal obj
-        Animal animalObj = new Animal();
-        //Create dog animal obj
-        Animal dogObj = new Dog();
-
-        animalObj.animalSound();
-        dogObj.animalSound();
-
-
-
+        Animal aObj = new Animal();
+        Animal pObj = new Pig();
+        aObj.animalSound();
+        pObj.animalSound();
     }
+}
+//    // forgot the void part in method
+//
+//    //off top of head code
+//    static public class Animal {
+//        public void animalSound(){
+//            System.out.println("generic animal noise");
+//        }
+//    }
+//
+//    static public class Dog extends Animal {
+//        public void animalSound() {
+//            System.out.println("The dog says 'roof'");
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        //Create animal obj
+//        Animal animalObj = new Animal();
+//        //Create dog animal obj
+//        Animal dogObj = new Dog();
+//
+//        animalObj.animalSound();
+//        dogObj.animalSound();
+//
+//
+//
+//    }
 
 
 
@@ -59,4 +78,4 @@ public class polymorphism {
 //        myPig.animalSound();
 //    }
 
-}
+
